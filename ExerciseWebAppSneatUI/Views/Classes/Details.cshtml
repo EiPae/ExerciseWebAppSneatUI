@@ -1,0 +1,66 @@
+﻿@model ExerciseWebAppSneatUI.Models.Class
+
+@{
+    ViewData["Title"] = "Details";
+}
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Details</h4>
+
+        <!-- Basic Layout & Basic with Icons -->
+        <div class="row">
+            <!-- Basic Layout -->
+            <div class="col-xxl">
+                <div class="card mb-4">
+                    <h4 class="mb-0">Class</h4>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <label asp-for="ClassName" class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-10">
+                                <input asp-for="ClassName" class="form-control" placeholder="ClassName" disabled />
+                                <span asp-validation-for="ClassName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label asp-for="ClassSection" class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-10">
+                                <input asp-for="ClassSection" class="form-control" placeholder="ClassSection" disabled />
+                                <span asp-validation-for="ClassSection" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label asp-for="Room" class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-10">
+                                <input asp-for="Room" class="form-control" placeholder="Room" disabled />
+                                <span asp-validation-for="Room" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Tutor" class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-10">
+                                <input asp-for="Tutor" class="form-control" placeholder="Tutor" disabled />
+                                <span asp-validation-for="Tutor" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-end">
+                            <div class="col-sm-10">
+                                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-primary"><span class="tf-icons bx bx-arrow-back"></span> Back to List</a>
+            </div>
+        </div>
+    </div>
+    <!-- / Content -->
+    <div class="content-backdrop fade"></div>
+</div>
+<!-- Content wrapper -->>
